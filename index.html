@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mystery number 🎯</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎯 Devinez le numéro mystère !</h1>
+
+  
+  <div class="difficulty-buttons">
+    <button onclick="startGame('easy')">Facile</button>
+    <button onclick="startGame('medium')">Moyen</button>
+    <button onclick="startGame('hard')">Difficile</button>
+  </div>
+
+
+  <div id="game" class="hidden">
+    <p>Entrez un nombre entre <span id="min"></span> et <span id="max"></span> :</p>
+    
+    <input type="number" id="userInput" placeholder="Votre nombre" />
+    <button onclick="checkGuess()">Valider</button>
+
+    <p id="feedback" class="message"></p>
+    <p id="attempts"></p>
+
+    <button id="restartBtn" class="hidden" onclick="resetGame()">🔁 Rejouer</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
