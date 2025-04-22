@@ -2,13 +2,32 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 20px;
-    background-image: url(images/img.JPG);
+    background-image: url(image/img.JPG);
     background-size: cover;  
     background-position: center;  
     background-attachment: fixed;  
     color: rgb(255, 255, 255); 
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;      
+    height: 100vh;            
+    margin: 0;            
   }
   
+  #main-container {
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;  
+    align-items: center;       
+    height: 100vh;             
+    margin: 130px;                 
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.4);  
+    border-radius: 30px;       
+    text-align: center;
+  }
+
   .hidden {
     display: none;
   }
@@ -19,15 +38,27 @@ body {
   }
   
   .success {
-    color: green;
+    color: rgb(7, 197, 7);
   }
-  
+
+  #min, #max {
+    color:rgb(234, 234, 50);
+  }
+
   .error {
     color: red;
   }
   
+  #attempts {
+    color: red;
+  }
+
+  h1 {
+    color: rgb(6, 6, 198);
+  }
+
   .info {
-    color: blue;
+    color: rgb(6, 6, 198);
   }
   
   button {
@@ -38,7 +69,58 @@ body {
   .difficulty-buttons button {
     margin: 5px;
   }
+  
+  button {
+    transition: color 0.3s, opacity 0.3s, box-shadow 0.3s; 
+    border: 2px solid #000000;
+  }
+  
+  button:hover {
+    color: rgb(0, 0, 0);
+    opacity: 0.9; 
+    box-shadow: 0 4px 10px rgb(6, 6, 198);
+  }
+  
+  
+  button:active {
+    opacity: 1; 
+    box-shadow: none; 
+  }
+  
 
+
+  @media (min-width: 1024px) {
+    #main-container {
+      max-width: 800px; 
+      padding: 40px;
+    }
+  
+    h1 {
+      font-size: 2.5em; 
+    }
+  
+    .difficulty-buttons {
+      gap: 20px;
+    }
+  
+    button {
+      padding: 12px 20px;
+      font-size: 1.2em; 
+    }
+  
+    input {
+      padding: 12px;
+      font-size: 1.2em; 
+    }
+  
+    #feedback, #attempts {
+      font-size: 1.6em; 
+    }
+  }
+  
+  
+  
+  
 
 
 

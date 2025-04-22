@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <meta name="color-scheme" content="light">
+  <meta description content="Des">
   <meta charset="UTF-8">
   <title>Mystery number 🎯</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🎯 Devinez le numéro mystère !</h1>
+  <div id="main-container">
+  <h1>🎯 Devine le numéro mystère !</h1>
 
-  
+
+  <select id="theme" onchange="switchtheme()">
+  <option value="Light">🌞</option>
+  <option value="Dark">🌜</option>
+  </select>
+
+  &nbsp;
+
   <div class="difficulty-buttons">
     <button onclick="startGame('easy')">Facile</button>
     <button onclick="startGame('medium')">Moyen</button>
@@ -17,7 +27,7 @@
 
 
   <div id="game" class="hidden">
-    <p>Entrez un nombre entre <span id="min"></span> et <span id="max"></span> :</p>
+    <p>⮕ Entre un nombre entre <span id="min"></span> et <span id="max"></span> :</p>
     
     <input type="number" id="userInput" placeholder="Votre nombre" />
     <button onclick="checkGuess()">Valider</button>

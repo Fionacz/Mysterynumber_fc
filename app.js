@@ -39,7 +39,7 @@ function updateAttempts() {
 function checkGuess() {
   const guess = parseInt(input.value, 10);
   if (isNaN(guess) || guess < min || guess > max) {
-    showFeedback(`⚠️ Entrez un nombre entre ${min} et ${max}.`, 'error');
+    showFeedback(`Entre un nombre entre ${min} et ${max}.`, 'error');
     return;
   }
 
@@ -47,13 +47,13 @@ function checkGuess() {
 
   setTimeout(() => {
     if (guess === mysteryNumber) {
-      showFeedback(`🎉 Bravo ! C'était (${mysteryNumber}) !`, 'success');
+      showFeedback(`😎 Gagné !`, 'success');
       endGame();
     } else if (attemptsLeft === 0) {
-      showFeedback(`❌ Perdu ! C'était ${mysteryNumber}.`, 'error');
+      showFeedback(`☹️ Perdu !`, 'error');
       endGame();
     } else {
-      const hint = guess < mysteryNumber ? "🔼 Nombre plus grand" : "🔽 Nombre plus petit";
+      const hint = guess < mysteryNumber ? "🔼 Plus grand" : "🔽 Plus petit";
       showFeedback(`${hint} !`, 'info');
       updateAttempts();
     }
@@ -73,5 +73,10 @@ function endGame() {
 
 function resetGame() {
   gameContainer.classList.add('hidden');
+}
+
+function switchtheme() {
+const theme = document.getElementById("theme").value ;
+document.getElementsByTagName("meta")[0].content = theme ;
 }
 
