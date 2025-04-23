@@ -47,10 +47,10 @@ function checkGuess() {
 
   setTimeout(() => {
     if (guess === mysteryNumber) {
-      showFeedback(`😎 Gagné !`, 'success');
+      showFeedback(`😎 Gagné ! C'était (${mysteryNumber}).`, 'success');
       endGame();
     } else if (attemptsLeft === 0) {
-      showFeedback(`☹️ Perdu !`, 'error');
+      showFeedback(`☹️ Perdu ! C'était (${mysteryNumber}).`, 'error');
       endGame();
     } else {
       const hint = guess < mysteryNumber ? "🔼 Plus grand" : "🔽 Plus petit";
