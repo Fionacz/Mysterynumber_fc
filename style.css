@@ -55,6 +55,15 @@ body {
 
   h1 {
     color: rgb(6, 6, 198);
+    font-size: 6em;
+    color: #fff;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px rgb(6, 6, 198),    
+      0 0 20px rgb(6, 6, 198), 
+      0 0 100px rgb(6, 6, 198),
+      0 0 150px rgb(6, 6, 198);
+    animation: animate 4s linear infinite;
   }
 
   .info {
@@ -120,13 +129,24 @@ body {
   
   
   
-  
-
-
-
-  
-  
-  
+  @keyframes animate {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      opacity: 1;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px rgb(6, 6, 198),
+        0 0 20px rgb(6, 6, 198),
+        0 0 40px rgb(6, 6, 198),
+        0 0 80px rgb(6, 6, 198),
+        0 0 90px rgb(6, 6, 198),
+        0 0 100px rgb(6, 6, 198),
+        0 0 150px rgb(6, 6, 198);
+    }
+    20%, 24%, 55% {
+      opacity: 0.3;
+      text-shadow: none;
+    }
+  }
 
 
 
